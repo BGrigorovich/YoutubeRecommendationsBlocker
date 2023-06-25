@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Recommendations Blocker",
+  "version": "1.0",
+  "description": "An extension to block all home feed except stories and 3 top videos.",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
